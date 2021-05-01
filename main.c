@@ -1,6 +1,6 @@
-void	start();
+void	_start();
 
 int	main()
 {
-	start();
+	_start();
 }
