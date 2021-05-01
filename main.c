@@ -1,6 +1,6 @@
-void	_start();
+void	neaboba();
 
 int	main()
 {
-	_start();
+	neaboba();
 }
