@@ -8,11 +8,12 @@
 
 // Asm functions
 size_t	ft_strlen(const char *s);
-
+char	*ft_strcpy(char *dist, const char *src);
 
 // Test functions on C
 char	*get_random_string();
 int	test_ft_strlen(int count);
+int	test_ft_strcpy(int count);
 
 // Test utils
 void	error(char *reason);

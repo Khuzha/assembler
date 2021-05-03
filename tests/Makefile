@@ -1,6 +1,6 @@
 NAME = tester.a
 SRCS =	main.c random_string.c utils.c fdprintf.c \
-		test_ft_strlen.c
+		test_ft_strlen.c test_ft_strcpy.c
 
 SRCOBJS = $(SRCS:.c=.o)
 
@@ -15,6 +15,7 @@ $(NAME): $(SRCOBJS) test.h
 
 clean:
 	rm -f $(SRCOBJS)
+	rm -f srcs/*.o
 
 fclean: clean
 	rm -f $(NAME)
