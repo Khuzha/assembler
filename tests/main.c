@@ -14,6 +14,8 @@ int	main(int argc, char **argv)
 	printf("==============================\n");
 	test_ft_strcpy(count);
 	printf("==============================\n");
+	test_ft_strcmp(count);
+	printf("==============================\n");
 
 	printf("finish\n");
 	return (0);

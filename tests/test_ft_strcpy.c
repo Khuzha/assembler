@@ -7,6 +7,7 @@ int	test_ft_strcpy(int count)
 	char	*dist1;
 	char	*dist2;
 	char 	*str;
+	size_t	len;
 	int		i;
 	int		correct;
 
@@ -15,8 +16,9 @@ int	test_ft_strcpy(int count)
 	while (i < count)
 	{
 		str = get_random_string();
-		dist1 = malloc(strlen(str));
-		dist2 = malloc(strlen(str));
+		len = strlen(str);
+		dist1 = calloc(len, len);
+		dist2 = calloc(len, len);
 		orig_value = strcpy(dist1, str);
 		my_value = ft_strcpy(dist2, str);
 		printf("str       = |%s|\n", str);

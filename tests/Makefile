@@ -1,6 +1,7 @@
 NAME = tester.a
 SRCS =	main.c random_string.c utils.c fdprintf.c \
-		test_ft_strlen.c test_ft_strcpy.c
+		test_ft_strlen.c test_ft_strcpy.c \
+		test_ft_strcmp.c
 
 SRCOBJS = $(SRCS:.c=.o)
 
