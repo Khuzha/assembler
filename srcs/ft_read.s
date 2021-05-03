@@ -1,8 +1,8 @@
-global 		_ft_write			; make _ft_write avialible outer from module
+global 		_ft_read			; make _ft_read avialible outer from module
 section		.text				; define code memory section
 extern		___error
 
-_ft_write:	mov rax, 0x2000004
+_ft_read:	mov rax, 0x2000003
 			syscall
 			jc .catch
 			ret

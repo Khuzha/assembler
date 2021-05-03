@@ -17,6 +17,10 @@ int	main(int argc, char **argv)
 	test_ft_strcmp(count);
 	printf("==============================\n");
 	test_ft_write(count);
+	printf("==============================\n");
+	test_ft_strdup(count);
+	printf("==============================\n");
+	test_ft_read();
 
 	printf("finish\n");
 	return (0);
