@@ -1,6 +1,6 @@
-global _ft_strcpy					; make _ft_strlen avialible outer from module
-
+global _ft_strcpy					; make _ft_strcpy avialible outer from module
 section		.text					; define code memory section
+
 _ft_strcpy:	xor rax, rax			; put zero to rax
 .loop:		mov	bl, byte[rsi + rax]	;
 			mov byte[rdi + rax], bl	;
