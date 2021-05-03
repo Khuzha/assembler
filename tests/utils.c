@@ -17,15 +17,17 @@ int		is_number(char *str)
 	return (1);
 }
 
-void	change_stdout_fd(int fd)
+void	file_mode(int target, int backup)
 {
-	if (dup2(fd, 1) == -1)
+	if (dup2(1, backup) == -1)
+		error("dup2 error");
+	if (dup2(target, 1) == -1)
 		error("dup2 error");
 }
 
-// void	stdout_mode(int fd)
-// {
+void	stdout_mode(int backup)
+{
 
-// 	if (dup2(, fd) == -1)
-// 		error("dup2 error");
-// }
+	if (dup2(backup, 1) == -1)
+		error("dup2 error");
+}

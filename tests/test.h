@@ -17,5 +17,6 @@ int	test_ft_strlen(int count);
 // Test utils
 void	error(char *reason);
 int		is_number(char *str);
-void	change_stdout_fd(int fd);
+void	file_mode(int target, int backup);
+void	stdout_mode(int backup);
 int		fdprintf (int fd, size_t bufmax, const char * fmt, ...);

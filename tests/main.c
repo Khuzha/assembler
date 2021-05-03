@@ -11,10 +11,10 @@ int	main(int argc, char **argv)
 	count = (argc == 2 && is_number(argv[1])) ?
 		atoi(argv[1]) : 10;
 	
-	stdout = STDOUT_FILENO;
-	change_stdout_fd(fd);
+	stdout = 1;
+	file_mode(fd, stdout);
 	test_ft_strlen(count);
-	change_stdout_fd(stdout);
+	stdout_mode(stdout);
 
 	printf("finish\n");
 	return (0);
