@@ -16,6 +16,7 @@ int	test_ft_strcmp(int count)
 		str1 = get_random_string();
 		str2 = get_random_string();
 		orig_value = strcmp(str1, str2);
+		printf("TEST NO %d OF %d\n", i + 1, count);
 		printf("str1      = |%s|\n", str1);
 		printf("str2      = |%s|\n", str2);
 		printf("strcmp    = |%d|\n", orig_value);

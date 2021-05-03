@@ -21,12 +21,15 @@ int	test_ft_strcpy(int count)
 		dist2 = calloc(len, len);
 		orig_value = strcpy(dist1, str);
 		my_value = ft_strcpy(dist2, str);
+		printf("TEST NO %d OF %d\n", i + 1, count);
 		printf("str       = |%s|\n", str);
 		printf("strcpy    = |%s|\n", orig_value);
 		printf("ft_strcpy = |%s|\n", my_value);
 		printf("-----\n");
 		if (strcmp(orig_value, my_value))
 			correct = 0;
+		free(dist1);
+		free(dist2);
 		i++;
 	}
 	return (correct);

@@ -20,6 +20,7 @@ int	test_ft_write(int count)
 		len = strlen(str);
 		my_value = ft_write(fd, str, len);
 		orig_value = write(fd, str, len);
+		printf("TEST NO %d OF %d\n", i + 1, count);
 		printf("ft_write = %lu\n", my_value);
 		printf("write    = %lu\n", orig_value);
 		printf("-----\n");
@@ -27,6 +28,5 @@ int	test_ft_write(int count)
 			correct = 0;
 		i++;
 	}
-
 	return correct;
 }

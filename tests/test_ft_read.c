@@ -18,6 +18,7 @@ int	test_ft_read()
 	str2 = calloc(sizeof(char) * len, len);
 	orig_value = write(fd, str2, len);
 	my_value = ft_write(fd, str1, len);
+	printf("TEST NO 1 OF 1\n");
 	printf("ft_read = %lu\n", my_value);
 	printf("read    = %lu\n", orig_value);
 	printf("-----\n");

@@ -15,6 +15,7 @@ int	test_ft_strlen(int count)
 		str = get_random_string();
 		orig_value = strlen(str);
 		my_value = ft_strlen(str);
+		printf("TEST NO %d OF %d\n", i + 1, count);
 		printf("str       = |%s|\n", str);
 		printf("strlen    = |%lu|\n", orig_value);
 		printf("ft_strlen = |%lu|\n", my_value);
