@@ -17,14 +17,15 @@ int		is_number(char *str)
 	return (1);
 }
 
-void	file_mode(int fd)
+void	change_stdout_fd(int fd)
 {
 	if (dup2(fd, 1) == -1)
 		error("dup2 error");
 }
 
-void	stdout_mode()
-{
-	if (dup2(1, 1) == -1)
-		error("dup2 error");
-}
+// void	stdout_mode(int fd)
+// {
+
+// 	if (dup2(, fd) == -1)
+// 		error("dup2 error");
+// }

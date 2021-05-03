@@ -4,18 +4,18 @@ int	main(int argc, char **argv)
 {
 	int count;
 	int fd;
+	int	stdout;
 
 	if (!(fd = open("test.log", O_CREAT | O_WRONLY | O_TRUNC, 0655)))
 		error("couldn't create log file");
 	count = (argc == 2 && is_number(argv[1])) ?
 		atoi(argv[1]) : 10;
+	
+	stdout = STDOUT_FILENO;
+	change_stdout_fd(fd);
+	test_ft_strlen(count);
+	change_stdout_fd(stdout);
 
-	if (dup2(fd, 1) == -1)
-		error("dup2 error");
-	test_ft_strlen(count, fd);
-	if (dup2(1, fd) == -1)
-		error("dup2 error");
-
-	printf("ok\n");
+	printf("finish\n");
 	return (0);
 }
