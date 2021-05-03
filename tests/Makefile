@@ -1,5 +1,5 @@
 NAME = tester.a
-SRCS =	main.c random_string.c utils.c \
+SRCS =	main.c random_string.c utils.c fdprintf.c \
 		test_ft_strlen.c
 
 SRCOBJS = $(SRCS:.c=.o)

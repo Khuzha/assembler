@@ -9,6 +9,12 @@ int	main(int argc, char **argv)
 		error("couldn't create log file");
 	count = (argc == 2 && is_number(argv[1])) ?
 		atoi(argv[1]) : 10;
+
+	file_mode(fd);
 	test_ft_strlen(count, fd);
+	if (dup2(1, fd) == -1)
+		error("dup2 error");
+
+	printf("ok\n");
 	return (0);
 }

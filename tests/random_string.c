@@ -1,11 +1,18 @@
 #include "test.h"
 
+long	get_time()
+{
+		struct timeval time;
+		gettimeofday(&time, NULL);
+		return (time.tv_usec);
+}
+
 char	*get_random_string()
 {
 	char	*str;
 	int		length;
 
-	srand(time(NULL));
+	srand(get_time());
 	length = rand() % 256;
 	str = malloc(sizeof(char) * (length + 1));
 	str[length] = '\0';
