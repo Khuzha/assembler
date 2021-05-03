@@ -7,15 +7,17 @@
 #include <stdarg.h>
 
 // Asm functions
+ssize_t	ft_write(int fd, const void *buf, size_t count);
 size_t	ft_strlen(const char *s);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dist, const char *src);
 
 // Test functions on C
 char	*get_random_string();
-int	test_ft_strlen(int count);
-int	test_ft_strcpy(int count);
-int	test_ft_strcmp(int count);
+int		test_ft_strlen(int count);
+int		test_ft_strcpy(int count);
+int		test_ft_strcmp(int count);
+int		test_ft_write(int count);
 
 // Test utils
 void	error(char *reason);
