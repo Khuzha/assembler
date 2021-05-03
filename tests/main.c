@@ -10,7 +10,8 @@ int	main(int argc, char **argv)
 	count = (argc == 2 && is_number(argv[1])) ?
 		atoi(argv[1]) : 10;
 
-	file_mode(fd);
+	if (dup2(fd, 1) == -1)
+		error("dup2 error");
 	test_ft_strlen(count, fd);
 	if (dup2(1, fd) == -1)
 		error("dup2 error");
